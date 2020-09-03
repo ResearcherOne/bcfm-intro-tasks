@@ -18,3 +18,6 @@
 - export NODE_IP=$(kubectl get nodes --namespace default -o jsonpath="{.items[0].status.addresses[0].address}")
 - echo http://$NODE_IP:$NODE_PORT 
 - echo "visit the given URL"
+
+## Example Deployment
+- ![Example Deployment.](https://raw.githubusercontent.com/ResearcherOne/bcfm-intro-tasks/master/bestcloudforme-architecture.png)
