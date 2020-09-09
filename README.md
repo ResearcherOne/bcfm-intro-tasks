@@ -7,9 +7,13 @@
 ## Deployment
 ### Push Flask App to Local Registry
 - cd 02-dockerized-flask
-- sudo docker build ./ flask-80
+- sudo docker build ./ -t flask-80
 - sudo docker tag flask-80 localhost:5000/flask-80
 - sudo docker push localhost:5000/flask-80
+
+### Optional - Running App
+- sudo docker run -p 8080:80 flask-80
+
 ### Install Helm Package
 - helm install flask-app-80 ./flask-app-80/ --set service.type=NodePort
 
